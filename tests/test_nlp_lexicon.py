@@ -67,3 +67,15 @@ def test_generic_explainers_are_not_findings(sentence):
 def test_an_organism_name_is_not_split_across_sentences():
     parts = N.sentences("Hasilnya, ada satu jenis makanan yang kadar bakteri E. coli melebihi batas. Kalimat berikutnya.")
     assert len(parts) == 2 and "E. coli" in parts[0]
+
+
+def test_a_modal_after_a_bare_causal_phrase_makes_it_an_explainer():
+    """Found by reading the all-outlet run: this resolved a Cianjur event it did not concern."""
+    assert not reports_a_lab_finding(
+        "Risiko perubahan zat kimia seperti nitrat yang dipicu bakteri pengurai dapat menyebabkan keracunan.")
+
+
+def test_a_modal_does_not_discount_a_genuine_finding_that_mentions_what_the_agent_can_do():
+    assert reports_a_lab_finding(
+        "Hasil uji laboratorium menunjukkan adanya bakteri E. coli yang dapat menyebabkan diare.")
+    assert reports_a_lab_finding("BGN menyebut insiden disebabkan nitrit yang tinggi.")

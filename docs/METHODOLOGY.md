@@ -334,7 +334,12 @@ Implemented in `analysis/build_evidence.py`.
   contamination reported > clean > awaiting > samples taken > no cause information > no article read.
   An event counts as *resolved* when an article reports a lab contamination or clean result.
 - **Lag = days from the incident date to the earliest article date reporting a result.** This, not
-  the lag to the first article, says whether causes get published at all.
+  the lag to the first article, says whether causes get published at all. **It is right-censored at
+  30 days by construction**: linking accepts articles only up to 30 days after the incident, so the
+  longest possible lag is about 30 and a result published later is not counted. "Resolved" therefore
+  means "a laboratory result was reported within 30 days". The window was not widened because a
+  longer one adds ambiguity (more events in the same regency inside the window) and the feeds
+  contain few late follow-ups; whether it should be widened is an open question.
 - The headline number is **per event**, because per-document shares change whenever the corpus
   changes composition (adding follow-ups would move "49% no cause information" without anything
   about the incidents changing).
@@ -351,6 +356,7 @@ Implemented in `analysis/build_evidence.py`.
 | Lab-finding precision, round 2 | Read all 24 first flagged findings | 4 were not laboratory causes (a headcount matched by "ditemukan", an inspection's "risk factors", negligence, a clean drinking-water result). Rule tightened; earlier run kept for comparison. |
 | Lab-finding **recall** | Read a random sample of 60 sentences containing strong cause vocabulary that were **not** flagged (`analysis/recall_audit.py`, seed 7) | About 8% (5 of 60) were genuine lab findings the rules missed, mostly passive and "kandungan bakteri" phrasings, plus a splitter that cut "E. coli" in half. Fixed. |
 | Widened rule | Read every newly flagged sentence | 10 of 11 genuine (one was commentary) |
+| All-outlet findings | Read the first finding for each of the 52 events the five-outlet run resolved | 51 stood. One was a false positive (a generic explainer, "nitrat yang dipicu bakteri pengurai **dapat** menyebabkan keracunan", which resolved a Cianjur event it did not concern): a modal after a bare causal phrase now marks an explainer, pinned as a test. Softer cases that remain counted: a preliminary "uji awal positif E.coli" still awaiting official results (Bandar Lampung), a result described as "beberapa waktu lalu" that may belong to an earlier incident (Gunungkidul), a lab finding of three bacteria with the cause "not concluded" (Karo), and clean results counted as results (4 events). |
 | Regression | 175 automated tests, offline | Pass. Sentences from each audit are pinned as tests. |
 
 **Who did the reading:** the samples above were read and judged by the analyst working on this
@@ -381,6 +387,11 @@ would tell whether the recall improvement holds.
   refusal to resolve ambiguity all trade recall for precision. A follow-up that names the place
   only in the body is `weak` and does not count. Kompas is only partly crawled (linked and
   ambiguous headlines).
+- **The lag to a reported result is censored at 30 days** (section 9), and events from the last few
+  weeks before the crawl have had less time to be reported on than earlier ones.
+- **Feed depth differs by outlet.** detik and CNN reach back to April 2025, Antara, Kompas and
+  Liputan6 to January 2025, so the earliest incidents (2024 Q4 and 2025 Q1: 13 events) have almost no
+  discovered coverage and the share resolved by quarter is not comparable across the whole span.
 - **Regex coding.** Recall was spot-checked but not measured on a labelled set, so lab-result
   counts are floors, and symptom and food shares are what reporters mentioned, not clinical
   incidence.
@@ -440,12 +451,32 @@ wikitext and the evidence runs preserve the version analysed here.
 
 ## 14. Status at the time of writing
 
-- Structured layer and the cited-article corpus: complete (revision 29900932).
-- Discovery feeds: complete for all five outlets.
-- Discovered-article crawls: detik (816 of 846 read), Liputan6 (165 of 165) and CNN (230 of 230)
-  complete; Antara and Kompas were still running.
-- Cause findings from the detik-only run (`20260919T163016Z`): events with a laboratory result
-  reported went from 10 (cited articles alone) to 25 with discovery, 15 of them newly resolved, at
-  a median 11 days after the incident; 142 events still read "awaiting". The all-outlet run that
-  supersedes these figures will appear as a newer directory under `data/evidence/runs/`; its
-  `summary.json` is authoritative.
+All stages are complete. The authoritative numbers are in `data/evidence/runs/20260919T201142Z/summary.json`
+(`data/evidence/LATEST` names the newest run).
+
+- Structured layer and the cited-article corpus: revision 29900932; 842 rows, 459 events, 308 of
+  425 cited articles read.
+- Discovery feeds: complete for all five outlets (section 8.2).
+- Discovered-article crawls: 2,853 URLs across the five outlets, 2,830 read. The other 23 are detik
+  photo galleries that carry only captions. Failures caused by the computer sleeping (DNS lookups,
+  reset connections) were retried per ledger and all recovered: 7 in detik, 6 in Antara and 10 in
+  Kompas; Liputan6 and CNN had none.
+- Linking (all outlets, 4,504 articles including the 308 cited): 2,111 linked to one event, 564
+  ambiguous, 191 weak, 1,638 matched no event.
+- **Cause findings, per event over all 459.** Events with a laboratory result reported within 30
+  days: **10 from the cited articles alone, 51 with discovery** (41 newly resolved; 47 report
+  contamination and 4 a clean result), a median 9 days after the incident (20 within a week, 16
+  within 8-14 days, 15 later, maximum 27, censored at 30). Events with no article at all fell from
+  129 to 60, and 246 events gained at least one independently found article (1,864 in all). Agents
+  named across the 51: unspecified bacteria 38, E. coli 21, Bacillus 7, Salmonella 6,
+  Staphylococcus 3, nitrite 2, histamine 1, other chemical 1. 176 events still read "awaiting
+  results" after every article. Earlier runs, made with looser lexicons and fewer outlets, are kept
+  in `data/evidence/runs/` so the effect of each change can be traced.
+- **Not resolved by these data:** 89% of events. That does not mean their causes were never found.
+  It means no article in these five outlets, within 30 days, reported a laboratory result the
+  regexes recognised. Official documents were not searched, the blocked publishers are missing, and
+  recall is spot-checked, not measured (section 10).
+- Open next steps: a human-labelled sample to measure recall; testing whether a longer link window
+  recovers late results without adding ambiguity; the Wayback retry of the 117 failed
+  Wikipedia-cited URLs once archive.org stops rate-limiting; and official sources (BPOM, BGN and
+  regional health offices).

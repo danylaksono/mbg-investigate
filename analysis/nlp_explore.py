@@ -64,12 +64,22 @@ NOT_A_RESULT = re.compile(
     r"biasanya|umumnya|lazim|bisa|dapat|mungkin)\b", re.I)
 
 
+CAUSAL_START = re.compile(r"(?:disebabkan|dipicu|akibat|penyebab)", re.I)
+MODAL_AFTER = re.compile(r"\b(?:dapat|bisa|berpotensi|berisiko|mampu)\b", re.I)
+
+
 def reports_lab_finding(sentence: str) -> bool:
     """A sentence that states a laboratory finding. A hedge or negation counts only if it comes
     before or inside the finding: "dari hasil lab ada kandungan bakteri, dan tidak menemukan
     unsur pidana" is a finding, "belum ada hasil lab yang menyebut bakteri" is not."""
     m = LAB_POSITIVE.search(sentence)
-    return bool(m) and not NOT_A_RESULT.search(sentence[:m.end()])
+    if not m or NOT_A_RESULT.search(sentence[:m.end()]):
+        return False
+    # "nitrat yang dipicu bakteri pengurai DAPAT menyebabkan keracunan" is an explainer: a modal
+    # right after a bare causal phrase ("dipicu/disebabkan/akibat X") makes it a possibility.
+    if CAUSAL_START.match(m.group(0)) and MODAL_AFTER.search(sentence[m.end():m.end() + 45]):
+        return False
+    return True
 
 
 AWAITING = re.compile(

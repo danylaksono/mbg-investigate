@@ -132,32 +132,40 @@ and its date falls within 1 day before to 30 days after the incident. A named ve
 bare place name. An article matching two or more events is `ambiguous` and never assigned to
 the nearest one.
 
-Full-text step (detik only): 846 discovered articles fetched (816 read, 23 too short, 7
-network errors) at 8 s plus up to 50% jitter per request, about 2.5 hours, with no throttling.
+Full-text step, all five outlets (detik, Antara, Kompas, CNN Indonesia, Liputan6): 2,853 discovered
+articles fetched (2,830 read; the other 23 are detik photo galleries, which are captions only) at
+8 s plus up to 50% jitter per request, with no host returning a 403 or 429.
+Kompas is restricted to headline-linked and ambiguous items (1,127 of its 2,288 headlines).
 ```bash
-python analysis/make_fetch_targets.py --outlet detik      # priority list: linked, ambiguous, rest
-python -m mbgpipe articles --targets data/interim/discovered/detik.fetch_targets.jsonl \
-    --ledger data/interim/discovered/detik.fetch_ledger.jsonl --cache data/raw/articles_discovered \
+python -m mbgpipe discover --outlet <outlet>              # walk the topic feed, keep raw pages
+python analysis/pilot_link.py --outlet <outlet>           # link headlines to events
+python analysis/make_fetch_targets.py --outlet <outlet>   # priority list (--include linked,ambiguous for big feeds)
+python -m mbgpipe articles --targets data/interim/discovered/<outlet>.fetch_targets.jsonl \
+    --ledger data/interim/discovered/<outlet>.fetch_ledger.jsonl --cache data/raw/articles_discovered \
     --delay 8 --jitter 0.5 --no-wayback
 python analysis/build_evidence.py                         # link, extract findings, write an evidence run
 ```
 Headline or lead paragraph naming the venue or place links an article; a place named only deep
-in the body is `weak` and not linked. Result, per event, over the 437 events inside the feed's
-span (Apr 2025 onward): events with any article went from 315 to 352; 148 gained at least one
-independently found article (582 in all); **events whose articles report a laboratory result
-went from 9 to 21** across all 459 events (20 of them inside the feed's span: 17 contamination
-reported, 3 clean), a median 10 days after the incident (range 1-25). Agents named: E. coli (9 events), unspecified
-bacteria (14), Bacillus (4), Salmonella (4), nitrite (3), Staphylococcus (1). 142 events still
-read "awaiting lab results" after every article. That is one outlet and regex coding with
-unmeasured recall, so it is a floor, not a rate.
+in the body is `weak` and not linked. Result, per event, over all 459 events (evidence run
+`20260919T201142Z`; its `summary.json` is authoritative): events with no article at all fell from
+129 to 60; 246 events gained at least one independently found article (1,864 in all); and
+**events whose articles report a laboratory result went from 10 to 51 (11% of events), a median 9
+days after the incident**. Agents named: unspecified bacteria (38 events), E. coli (21), Bacillus
+(7), Salmonella (6), Staphylococcus (3), nitrite (2), histamine (1), other chemical (1). 176 events
+still read "awaiting lab results" after every article.
 
-Reading the first 24 findings by hand found 4 that were not laboratory causes (an inspection's
-"risk factors", a finding of negligence, a headcount of symptomatic students matched by the word
-"ditemukan"). The lexicon was tightened and pinned in `tests/test_nlp_lexicon.py`; the earlier
-run is still on disk to show the difference.
+Read this as "a result was reported **within 30 days**": linking accepts articles only up to 30
+days after the incident, so the lag distribution (maximum 27 days) is cut off at 30 by
+construction, and results published later are not counted. It is also coverage-limited (five
+outlets, no tribunnews or Jawapos group) and regex-coded with recall checked only by spot-check,
+so it is a floor, not a rate.
 
-Other outlets (Antara, Kompas, CNN Indonesia, Liputan6 allow their tag and search pages in
-robots.txt; Tempo needs JavaScript; Beritasatu blocks crawlers) are not built yet.
+Reading the findings by hand caught false positives at each stage: a headcount matched by the word
+"ditemukan", an inspection's "risk factors", negligence, and a generic explainer ("nitrat yang
+dipicu bakteri pengurai dapat menyebabkan keracunan"). Each was fixed and pinned in
+`tests/test_nlp_lexicon.py`; the earlier evidence runs are kept to show the difference.
+
+Tempo needs JavaScript and Beritasatu blocks crawlers, so both are excluded.
 
 ### Retrying failures
 
