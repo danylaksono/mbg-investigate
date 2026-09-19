@@ -1,0 +1,36 @@
+{
+  "incident_rows": 842,
+  "events": 459,
+  "date_span": [
+    "2024-10-02",
+    "2026-09-18"
+  ],
+  "symptomatic_counted_once_per_cell": 43479,
+  "symptomatic_if_summed_per_row_WRONG": 129336,
+  "rowspan_inflation_factor": 2.97,
+  "wikipedia_total_row": 11390,
+  "cumulative_reaches_wikipedia_total_on": "2025-10-01",
+  "kabkota_with_kode": 842,
+  "kabkota_kode_via_alias": [
+    "Kabupaten Bombaba",
+    "Kabupaten Ogan Komering Ilir",
+    "Kabupaten Polewali Manda",
+    "Kabupaten Tojo Una-Una",
+    "Kota Baubau",
+    "Kota Palangka Raya"
+  ],
+  "kabkota_without_kode": [],
+  "deaths_counted": 2,
+  "events_with_vague_or_unreported_count": 18,
+  "flag_counts": {
+    "count_shared_across_rows": 383,
+    "no_venue": 86,
+    "count_vague": 19,
+    "date_range": 9,
+    "count_unreported": 7,
+    "month_precision_only": 5,
+    "unnumbered_subject": 5,
+    "no_date": 2,
+    "no_source_url": 1
+  }
+}

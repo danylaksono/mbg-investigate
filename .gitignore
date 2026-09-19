@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.egg-info/
+data/raw/
+data/interim/
+data/reference/wilayah_level_1_2.sql
+# full text of news articles: other outlets' copyrighted work, not redistributed. Rebuild with `python -m mbgpipe corpus`.
+data/processed/corpus.jsonl

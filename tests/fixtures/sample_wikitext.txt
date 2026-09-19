@@ -1,0 +1,391 @@
+Berikut ini daftar kasus '''[[keracunan makanan]] massal''' dalam pendistribusian program makanan bergizi gratis atau yang sejenis di berbagai negara.
+
+== Negara ==
+{{daftar tak lengkap}}
+
+=== India ===
+* Pada tanggal 16 Juli 2013, di sebuah sekolah dasar di desa Gandaman di distrik Saran, negara bagian Bihar. Sekitar 23–27 siswa meninggal, dan puluhan lainnya jatuh sakit setelah menyantap Makanan Sekolah Gratis yang terkontaminasi pestisida.<ref name=BBC2>{{cite news |url=https://www.bbc.co.uk/news/world-asia-india-23353017 |title=India lunch deaths children buried in Bihar school |work=[[BBC News]] |location=London |date=18 July 2013 |access-date=18 July 2013 |archive-date=18 July 2013 |archive-url=https://web.archive.org/web/20130718164216/http://www.bbc.co.uk/news/world-asia-india-23353017 |url-status=live}}</ref><ref name=BBC3>{{cite news |title=India school lunch deaths: high pesticide levels found |url=https://www.bbc.co.uk/news/world-asia-23390972 |work=[[BBC News]] |location=London |date=20 July 2013 |access-date=20 June 2018 |archive-date=31 July 2019 |archive-url=https://web.archive.org/web/20190731234028/https://www.bbc.co.uk/news/world-asia-23390972 |url-status=live}}</ref><ref name=TimesOfIndia>{{cite news |url=http://timesofindia.indiatimes.com/india/Poison-theory-floats-as-Bihar-midday-meal-kills-27-kids/articleshow/21130119.cms |title=Poison theory floats as Bihar midday meal kills 27 kids |work=[[The Times of India]] |location=Mumbai |date=18 July 2013 |access-date=18 July 2013 |archive-date=19 July 2013 |archive-url=https://web.archive.org/web/20130719210204/http://timesofindia.indiatimes.com/india/Poison-theory-floats-as-Bihar-midday-meal-kills-27-kids/articleshow/21130119.cms |url-status=live}}</ref>
+
+=== Indonesia ===
+==== Makan Bergizi Gratis ====
+Tabel menampilkan informasi dari kasus keracunan [[Makan Bergizi Gratis]] yang diduga maupun telah dikonfirmasi.
+{| class="wikitable sortable"
+|+
+! rowspan="2" |Tanggal Kejadian
+! colspan="3" |Lokasi
+! colspan="2" |Jumlah Korban
+! rowspan="2" |Ref
+|-
+!Provinsi
+!Kabupaten/Kota
+!Tempat/Sekolah
+!Bergejala
+!Meninggal
+|-
+|29 September 2025
+| rowspan="9" |[[Aceh|Nanggroe Aceh Darussalam]]
+|[[Kabupaten Aceh Utara|Aceh Utara]]
+|SDN 6 Matangkuli
+|3 Siswa
+|
+|<ref name=":3">{{Cite web|last=Media|first=Kompas Cyber|date=2025-10-03|title=3 Murid SD Aceh Utara Mual dan Muntah Diduga Setelah Makan MBG|url=https://regional.kompas.com/read/2025/10/03/143203478/3-murid-sd-aceh-utara-mual-dan-muntah-diduga-setelah-makan-mbg|website=KOMPAS.com|language=id|access-date=2025-10-03}}</ref>
+|-
+|24 Januari 2026
+|[[Kabupaten Aceh Timur|Aceh Timur]]
+|TBA (Tidak disebutkan)
+|19 Siswa
+|
+|<ref name=":9">{{Cite web|last=Media|first=Kompas Cyber|date=2026-01-27|title=Korban Keracunan Makanan di Sekolah Cianjur Bertambah Jadi 33 Siswa, 12 Anak Dirujuk ke RS|url=https://regional.kompas.com/read/2026/01/27/190043678/korban-keracunan-makanan-di-sekolah-cianjur-bertambah-jadi-33-siswa-12-anak|website=KOMPAS.com|language=id|access-date=2026-01-27}}</ref>
+|-
+| rowspan="2" |11 Februari 2026
+| rowspan="2" |[[Kabupaten Aceh Singkil|Aceh Singkil]]
+|TK Bunga Al-Qur’an
+| rowspan="2" |33 Santri
+|
+| rowspan="2" |<ref>{{Cite web|title=Puluhan Santri di Aceh Singkil Diduga Keracunan MBG, SPPG Dihentikan Sementara|url=https://www.ajnn.net/news/puluhan-santri-di-aceh-singkil-diduga-keracunan-mbg-sppg-dihentikan-sementara/amp.html|website=www.ajnn.net|access-date=2026-02-12}}</ref>
+|-
+|Pesantren Modern Darul Mustafa
+|
+|-
+|26 Februari 2026
+| rowspan="2" |[[Kabupaten Bireuen|Bireuen]]
+|warga Simpang Mamplam dan Pandrah
+|140 Warga
+|
+|<ref>{{Cite web|title=Terungkap Info Awal Kasus Dugaan Keracunan MBG di Bireuen, Warga Telepon Kepala Puskesmas|url=https://aceh.tribunnews.com/nanggroe/1014016/terungkap-info-awal-kasus-dugaan-keracunan-mbg-di-bireuen-warga-telepon-kepala-puskesmas|website=Serambinews.com|language=id-ID|access-date=2026-05-01}}</ref>
+|-
+|17 September 2026
+|SMAN 1 Kuala
+|17 Siswa
+|
+|<ref>{{Cite web|title=Belasan Siswa di Bireuen Diduga Keracunan MBG, Aroma Ayam Sudah Tak Sedap|url=https://prohaba.tribunnews.com/nanggroe/48626/belasan-siswadi-bireuen-didugakeracunan-mbg-aroma-ayam-sudah-tak-sedap|website=Prohaba.co|language=id-ID|access-date=2026-09-18}}</ref>
+|-
+| rowspan="2" |26 Februari 2026
+| rowspan="2" |[[Kabupaten Aceh Selatan|Aceh Selatan]]
+|PAUD (Spesifik tidak disebutkan)
+| rowspan="2" |18 Siswa
+|
+| rowspan="2" |<ref>{{Cite web|date=2026-02-28|title=Dinkes Tetapkan Dugaan Keracunan Makanan Bergizi Gratis Aceh Selatan sebagai KLB|url=https://www.merdeka.com/peristiwa/dinkes-tetapkan-dugaan-keracunan-makanan-bergizi-gratis-aceh-selatan-sebagai-klb-542158-mvk.html|website=merdeka.com|language=id|access-date=2026-05-01}}</ref>
+|-
+|SMA (Spesifik tidak disebutkan)
+|
+|-
+|2 September 2026
+|[[Kabupaten Bener Meriah|Bener Meriah]]
+|SDN Bukit Mulie 
+|16 Orang
+|
+|<ref>{{Cite web|title=BREAKING NEWS: Belasan Siswa SD di Bener Meriah Diduga Keracunan MBG, Wartawan Diancam Oknum TNI|url=https://gayo.tribunnews.com/bener-meriah/54004/breaking-news-belasan-siswa-sd-di-bener-meriah-diduga-keracunan-mbg-wartawan-diancam-oknum-tni|website=tribungayo.com|language=id-ID|access-date=2026-09-03}}</ref>
+|-
+| rowspan="4" |30 Januari 2026
+| rowspan="6" |[[Jambi]]
+| rowspan="4" |[[Kabupaten Muaro Jambi|Muaro Jambi]]
+|TK (Spesifik tidak disebutkan)
+| rowspan="4" |150 Siswa
+|
+| rowspan="4" |<ref>{{Cite web|title=Korban Keracunan MBG di Muaro Jambi Tembus 150 Pelajar, Puluhan Masih Dirawat Inap|url=https://www.jambiseru.com/berita/31/01/korban-keracunan-mbg-di-muaro-jambi-tembus-150-pelajar-puluhan-masih-dirawat-inap|website=Jambiserucom ✅ : berita jambi seru hari ini|date=2026-01-31|access-date=2026-01-31|language=id|last=www.jambiseru.com}}</ref>
+|-
+|SD (Spesifik tidak disebutkan)
+|
+|-
+|SMP (Spesifik tidak disebutkan)
+|
+|-
+|SMA (Spesifik tidak disebutkan)
+|
+|-
+|9 April 2026
+| rowspan="2" |[[Kota Jambi]]
+|SMPN 7 Kota Jambi
+|3 Guru
+|
+|<ref>{{Cite web|last=jambitv.co|title=Heboh Dugaan Keracunan MBG di SMPN 7 Kota Jambi, Ini Fakta dan Klarifikasi Sekolah|url=https://jambitv.disway.id/kota-jambi/read/13307/heboh-dugaan-keracunan-mbg-di-smpn-7-kota-jambi-ini-fakta-dan-klarifikasi-sekolah|website=jambitv.co|language=id|access-date=2026-05-01}}</ref>
+|-
+|20 Mei 2026
+|SMKN 1 Kota Jambi
+|8 Siswa
+|
+|<ref>{{Cite web|title=Delapan Pelajar SMKN 1 Jambi Mual hingga Muntah setelah Santap MBG Tadi Pagi|url=https://jambi.tribunnews.com/makalam/1196531/delapan-pelajar-smkn-1-jambi-mual-hingga-muntah-setelah-santap-mbg-tadi-pagi|website=Tribunjambi.com|language=id-ID|access-date=2026-05-20}}</ref>
+|-
+|Agustus 2025
+| rowspan="4" |[[Kepulauan Bangka Belitung|Bangka Belitung]]
+|[[Kabupaten Belitung Timur|Belitung Timur]]
+|TBA (Tidak Diumumkan)
+|TBA (Tidak Diumumkan)
+|
+|<ref>{{Cite web|last=antaranews.com|date=2025-09-22|title=BPOM: Bakteri Salmonella di lauk picu keracunan MBG Belitung Timur|url=https://www.antaranews.com/berita/5126560/bpom-bakteri-salmonella-di-lauk-picu-keracunan-mbg-belitung-timur|website=Antara News|language=id|access-date=2025-09-24}}</ref>
+|-
+| rowspan="2" |4 Mei 2026
+| rowspan="2" |[[Kabupaten Belitung|Belitung]]
+|SDN 23 Tanjungpandan
+| rowspan="2" |30 Siswa
+|
+| rowspan="2" |<ref>{{Cite web|last=Suhendar|first=Dede|date=2026-05-04|title=Puluhan Murid Muntah, Kepsek SDN 23 Tanjungpandan Tidak Berani Sebut Keracunan MBG|url=https://belitung.tribunnews.com/lokal/213812/puluhan-murid-muntah-kepsek-sdn-23-tanjungpandan-tidak-berani-sebut-keracunan-mbg|website=belitung.tribunnews.com|access-date=2026-05-07}}</ref>
+|-
+|SD Negeri 7 Tanjungpandan
+|
+|-
+|18 September 2026
+|[[Kabupaten Bangka Tengah]]
+|Madrasah Ibtidaiyah (MI) Al-Arifin
+|6 Siswa
+|
+|<ref>{{Cite web|last=admin|date=2026-09-18|title=Enam Siswa MI Al-Arifin Dilarikan ke Puskesmas, Diduga Usai Santap MBG, Guru Temukan Ulat dalam Susu|url=https://doorstop.id/enam-siswa-mi-al-arifin-dilarikan-ke-puskesmas-diduga-usai-santap-mbg-guru-temukan-ulat-dalam-susu/|website=DOORSTOP ID|language=id|access-date=2026-09-18}}</ref>
+|-
+|25 September 2025
+| rowspan="7" |[[Kepulauan Riau]]
+|[[Kabupaten Karimun|Karimun]]
+|SMPN 2 Karimun
+|14 Siswa
+|
+|<ref>{{Cite web|first=Rachmawati|date=2025-09-25|title=14 Siswa SMP Negeri 2 Karimun Diduga Keracunan MBG, Polisi Ambil Sampel Menu|url=https://www.kompas.com/sumatera-selatan/read/2025/09/25/204500088/14-siswa-smp-negeri-2-karimun-diduga-keracunan-mbg-polisi-ambil|website=Kompas.com|access-date=2025-09-25}}</ref>
+|-
+|29 September 2025
+| rowspan="3" |[[Kota Batam]]
+|SDN 016 Seilekop
+|18 Siswa
+|
+|<ref>{{Cite web|last=Sara|first=Eusebius|title=18 Murid SDN 016 Seilekop, Batam Keracunan, Program MBG Dihentikan Sementara - Batam Pos|url=https://batampos.jawapos.com/infokota/2426637580/18-murid-sdn-016-seilekop-batam-keracunan-program-mbg-dihentikan-sementara|website=18 Murid SDN 016 Seilekop, Batam Keracunan, Program MBG Dihentikan Sementara - Batam Pos|language=id|access-date=2025-10-01}}</ref>
+|-
+|11 November 2025
+|MAN 2 Kota Batam
+|235 Siswa
+|
+|<ref>{{Cite web|title=MerahPutih Media Berita untuk Generasi Terkini|url=https://www.merahputih.com/|website=MerahPutih|language=id|access-date=2025-11-15}}</ref>
+|-
+|29 April 2026
+|SMK Negeri 3 Batam
+|Ratusan Siswa
+|
+|<ref>{{Cite web|last=admin|date=2026-04-30|title=Ratusan Siswa SMKN 3 Batam Diduga Keracunan MBG, Banyak yang Sakit Perut|url=https://inspirasitoday.com/ratusan-siswa-smkn-3-batam-diduga-keracunan-mbg-banyak-yang-sakit-perut/|website=Inspirasi Today|language=id|access-date=2026-05-07}}</ref>
+|-
+| rowspan="3" |15 April 2026
+| rowspan="3" |[[Kabupaten Kepulauan Anambas|Kepulauan Anambas]]
+|TK (Spesifik tidak disebutkan)
+| rowspan="3" |158 Siswa
+|
+| rowspan="3" |<ref>{{Cite web|title=MerahPutih Media Berita untuk Generasi Terkini|url=https://www.merahputih.com/|website=MerahPutih|language=id|access-date=2026-05-01}}</ref>
+|-
+|SD (Spesifik tidak disebutkan)
+|
+|-
+|SMP ((Spesifik tidak disebutkan)
+|
+|-
+| rowspan="2" |13 Januari 2025
+| rowspan="7" |[[Kalimantan Utara]]
+| rowspan="6" |[[Kabupaten Nunukan|Nunukan]]
+|SDN 003 Nunukan Selatan
+|29 Siswa
+|
+|<ref>{{Cite web|title=Puluhan Anak SD di Nunukan Keracunan MBG, Begini Penjelasan Penyedia Menu dan Perwakilan BGN|url=https://regional.kompas.com/read/2025/01/17/133943478/puluhan-anak-sd-di-nunukan-keracunan-mbg-begini-penjelasan-penyedia-menu|website=Kompas.com|archive-url=https://web.archive.org/web/20250312155351/https://regional.kompas.com/read/2025/01/17/133943478/puluhan-anak-sd-di-nunukan-keracunan-mbg-begini-penjelasan-penyedia-menu|archive-date=2025-03-12|access-date=2025-05-05|url-status=live}}</ref>
+|-
+|SMAN 2 Nunukan Selatan
+|> 30 Siswa
+|
+|<ref>{{Cite web|date=2025-01-19|title=Siswa SMA di Nunukan Juga Keracunan MBG, Lauk Tongkol Berulat|url=https://regional.kompas.com/read/2025/01/19/094801178/siswa-sma-di-nunukan-juga-keracunan-mbg-lauk-tongkol-berulat|website=Kompas.com|archive-url=https://web.archive.org/web/20250505070755/https://regional.kompas.com/read/2025/01/19/094801178/siswa-sma-di-nunukan-juga-keracunan-mbg-lauk-tongkol-berulat|archive-date=2025-05-05|access-date=2025-05-05|url-status=live}}</ref>
+|-
+| rowspan="4" |30 September 2025
+|PAUD Ar Rahman, Sei Limau
+| rowspan="4" |145 Siswa
+|
+| rowspan="4" |<ref>{{Cite web|last=Dzulviqor|first=Ahmad|date=2025-10-02|title=Keracunan MBG di Nunukan Bertambah Jadi 145 Anak, Telur Rebus Diduga Jadi Penyebab|url=https://regional.kompas.com/read/2025/10/02/142025478/keracunan-mbg-di-nunukan-bertambah-jadi-145-anak-telur-rebus-diduga-jadi|website=Kompas.com|access-date=2025-10-03}}</ref>
+|-
+|MI As Adiyah Tapal Batas
+|
+|-
+|SDN 04 Sei Limau
+|
+|-
+|SDN 05 Sei Limau
+|
+|-
+|22 September 2025
+|[[Kabupaten Bulungan|Bulungan]]
+|SMAN 1 Tanjung Selor
+|2 Siswa
+|
+|<ref>{{Cite web|date=2025-09-23|title=Diduga Keracunan Makanan MBG, 2 Pelajar SMAN 1 Tanjung Selor Dilarikan ke Rumah Sakit - MEDIA KALTIMTARA|url=https://mediakaltimtara.com/diduga-keracunan-makanan-mbg-2-pelajar-sman-1-tanjung-selor-dilarikan-ke-rumah-sakit/|language=id|access-date=2025-09-23}}</ref>
+|-
+| rowspan="12" |28 Agustus 2025
+| rowspan="16" |[[Bengkulu]]
+| rowspan="12" |[[Kabupaten Lebong|Lebong]]
+|PAUD IT Al-Azhar
+| rowspan="12" |539 Siswa
+|
+| rowspan="12" |<ref>{{Cite web|title=Tertinggi, Korban MBG di Lebong 539 Orang|url=https://bengkulu.bpk.go.id/tertinggi-korban-mbg-di-lebong-539-orang/}}</ref>
+|-
+|PAUD Az-Zahra
+|
+|-
+|TK Al Akhlak
+|
+|-
+|SD IT Al Azhar
+|
+|-
+|SD IT Al-Azhar Sukabumi
+|
+|-
+|SD Muhammadiyah Ujung Tanjung
+|
+|-
+|SD Muhammadiyah Ujung Tanjung II
+|
+|-
+|SD Negeri 17 Ujung Tanjung I
+|
+|-
+|SD Negeri 25 Desa Sukabumi
+|
+|-
+|SD IT Suka Bumi
+|
+|-
+|SMP 05 Lebong
+|
+|-
+|SMP 16 Lebong
+|
+|-
+|26 Februari 2026
+|[[Kabupaten Bengkulu Utara|Bengkulu Utara]]
+|
+|
+|1 Siswa
+|<ref>{{Cite web|last=daerahpost|date=2026-03-02|title=Diduga Keracunan Burger MBG, Siswa MIN 2 Ketahun Tutup Usia di RS Bhayangkara Bengkulu|url=https://daerahpost.com/polhukam/diduga-keracunan-burger-mbg-siswa-min-2-ketahun-tutup-usia-di-rs-bhayangkara-bengkulu/|website=Daerah Post|language=id|access-date=2026-05-01}}</ref>
+|-
+|23 April 2026
+|[[Kabupaten Bengkulu Tengah|Bengkulu Tengah]]
+|SMP Negeri 3 Bengkulu Tengah
+|8 Siswa
+|
+|<ref>{{Cite web|title=Breaking News: 8 Siswa SMPN 3 Bengkulu Tengah Diduga Keracunan MBG, Sempat Dirawat di Klinik|url=https://bengkulu.tribunnews.com/breaking-news/100624/breaking-news-7-siswa-smpn-3-bengkulu-tengah-diduga-keracunan-mbg-sempat-dirawat-di-klinik|website=Tribunbengkulu.com|language=id-ID|access-date=2026-05-07}}</ref>
+|-
+|4 Juni 2026
+|[[Kabupaten Kepahiang|Kepahiang]]
+|SDN 18 Taba Tebelet
+|16 Orang
+|
+|<ref>{{Cite web|last=betv.com|title=Bertambah Menjadi 16 Orang, Korban Keracunan MBG di Kepahiang Termasuk Guru dan Penjaga Sekolah|url=https://betv.disway.id/daerah/read/73679/bertambah-menjadi-16-orang-korban-keracunan-mbg-di-kepahiang-termasuk-guru-dan-penjaga-sekolah|website=betv.com|language=id|access-date=2026-06-05}}</ref>
+|-
+|4 September 2026
+|[[Kota Bengkulu]]
+|SDN 59 Kota Bengkulu
+|7 Siswa
+|
+|<ref>{{Cite web|date=2026-09-04|title=Keracunan MBG Terus Terjadi, Kali Ini Terjadi di Bengkulu|url=https://www.tempo.co/politik/keracunan-mbg-terus-terjadi-kali-ini-terjadi-di-bengkulu-2285541|website=Tempo|language=id|access-date=2026-09-06}}</ref>
+|-
+|29 Agustus 2025
+| rowspan="17" |[[Daerah Khusus Ibukota Jakarta|DKI Jakarta]]
+|[[Kota Administrasi Jakarta Selatan|Jakarta Selatan]]
+|TBA (Tidak diumumkan)
+|3 Siswa
+|
+|<ref name=":2">{{Cite web|last=Adji Prihammanda|first=Bayu|date=2025-10-01|title=Ditanya Kejadian Keracunan MBG di Jakarta, Pramono: Tanyakan Pemerintah Pusat|url=https://news.republika.co.id/berita/t3fv80487/ditanya-kejadian-keracunan-mbg-di-jakarta-pramono-tanyakan-pemerintah-pusat|website=Repuplika.co.id|access-date=2025-10-04}}</ref>
+|-
+| rowspan="2" |8 September 2025
+| rowspan="4" |[[Kota Administrasi Jakarta Utara|Jakarta Utara]]
+|TBA (Tidak diumumkan)
+|14 Siswa
+|
+|<ref name=":2" />
+|-
+|SMPN 277 Jakarta
+|Puluhan Siswa
+|
+|<ref>{{Cite web|date=2025-09-27|title=Pangkal Soal Keracunan Massal Makan Bergizi Gratis|url=https://www.tempo.co/politik/keracunan-makan-bergizi-gratis-2073995|website=Tempo|language=id|access-date=2025-10-04}}</ref>
+|-
+|Tidak Disebutkan
+|Kelurahan Lagoa
+|79 Siswa
+|
+|<ref>{{Cite web|last=Elfira|first=Andi Yuni|date=2025-09-23|title=Keracunan Massal Program MBG: DPR Minta Evaluasi Sistem, JPPI Desak Moratorium|url=https://ruminews.id/2025/09/23/keracunan-massal-program-mbg-dpr-minta-evaluasi-sistem-jppi-desak-moratorium/|website=ruminews|language=id|access-date=2025-09-24}}</ref>
+|-
+|23 September 2025
+|SMAN 15 Jakarta
+|7 Siswa
+|
+|<ref>{{Cite web|last=Adi Prihammanda|first=Bayu|date=2025-09-23|title=Tujuh Siswa SMAN 15 Jakarta Alami Gejala Keracunan Usai Santap MBG|url=https://news.republika.co.id/berita/t31pal484/tujuh-siswa-sman-15-jakarta-alami-gejala-keracunan-usai-santap-mbg|website=republika.co.id|access-date=2025-09-24}}</ref>
+|-
+|25 September 2025
+| rowspan="9" |[[Kota Administrasi Jakarta Timur|Jakarta Timur]]
+|SDN 07 Pulogebang
+|6 Siswa
+|
+|<ref>{{Cite web|last=Kevin Candra Kurniawan|first=Febryan|date=2025-09-25|title=Kronologi 6 Siswa SDN 07 Pulogebang Alami Mual dan Muntah Usai Santap MBG|url=https://megapolitan.kompas.com/read/2025/09/25/13450971/kronologi-6-siswa-sdn-07-pulogebang-alami-mual-dan-muntah-usai-santap-mbg|website=Kompas.com|access-date=2025-09-25}}</ref>
+|-
+|30 September 2025
+|SDN 01 Gedong
+|22 Siswa
+|
+|<ref>{{Cite web|title=Korban Keracunan MBG di SDN Gedong Jadi 22 Siswa, Komnas PA Kritik Guru Jadi Pencicip Makanan|url=https://www.suara.com/news/2025/10/01/144207/korban-keracunan-mbg-di-sdn-gedong-jadi-22-siswa-komnas-pa-kritik-guru-jadi-pencicip-makanan|website=suara.com|language=id|access-date=2025-10-01}}</ref>
+|-
+| rowspan="4" |3 April 2026
+|SDN Pondok Kelapa 1
+| rowspan="4" |135 Siswa
+|
+| rowspan="4" |<ref>{{Cite web|date=2026-04-04|title=Kasus Keracunan MBG di Jakarta Terus Meluas, Total 135 Orang Terdampak - terkenal.co.id|url=https://terkenal.co.id/kasus-keracunan-mbg-di-jakarta-terus-meluas-total-135-orang-terdampak/,%20https://terkenal.co.id/kasus-keracunan-mbg-di-jakarta-terus-meluas-total-135-orang-terdampak/|language=id|access-date=2026-05-01}}</ref>
+|-
+|SDN Pondok Kelapa 7
+|
+|-
+|SDN Pondok Kelapa 9
+|
+|-
+|SMAN 91 Jakarta
+|
+|-
+| rowspan="3" |8 Mei 2026
+|SDN Cakung Timur 01
+| rowspan="3" |252 Siswa
+|
+| rowspan="3" |<ref>{{Cite web|last=Sari|first=Brigitta Belia Permata|title=252 Siswa di Jaktim Diduga Keracunan MBG, Alami Gejala Usai Makan Pangsit Tahu|url=https://news.detik.com/berita/d-8481654/252-siswa-di-jaktim-diduga-keracunan-mbg-alami-gejala-usai-makan-pangsit-tahu|website=detiknews|language=id-ID|access-date=2026-05-10}}</ref>
+|-
+|SDN Ujung Menteng 02
+|
+|-
+|SDN Ujung Menteng 03
+|
+|-
+|29 Oktober 2025
+| rowspan="2" |[[Kota Administrasi Jakarta Barat|Jakarta Barat]]
+|SDN Meruya Selatan 01
+|20 Siswa
+|
+|<ref>{{Cite web|last=Soni|first=Mukhri|title=SDN Meruya Selatan 01 Hentikan Sementara Program MBG, 20 Siswa Diduga Keracunan - Jakarta Daily Indonesia|url=https://indonesia.jakartadaily.id/ekonomi-bisnis/69316182933/sdn-meruya-selatan-01-hentikan-sementara-program-mbg-20-siswa-diduga-keracunan|website=SDN Meruya Selatan 01 Hentikan Sementara Program MBG, 20 Siswa Diduga Keracunan - Jakarta Daily Indonesia|language=id|access-date=2025-11-01}}</ref>
+|-
+|22 Mei 2026
+|SMPN 82 Jakarta
+|116 Siswa
+|
+|<ref>{{Cite web|last=Media|first=Kompas Cyber|date=2026-05-26|title=116 Siswa SMP di Grogol Jakbar Diduga Keracunan Usai Santap MBG|url=https://megapolitan.kompas.com/read/2026/05/26/15212251/116-siswa-smp-di-grogol-jakbar-diduga-keracunan-usai-santap-mbg|website=KOMPAS.com|language=id|access-date=2026-05-26}}</ref>
+|-
+|1 April 2026
+|[[Kota Administrasi Jakarta Pusat|Jakarta Pusat]]
+|SMPN 71 Jakarta Pusat
+|48 Siswa
+|
+|<ref>{{Cite web|title=Instagram|url=https://www.instagram.com/p/DXJmRxskwr8/|website=www.instagram.com|access-date=2026-05-01}}</ref>
+|-
+|
+|[[Papua Selatan]]
+|
+|
+|
+|
+|
+|-
+|TOTAL
+| colspan="3" |
+|± 11.390
+| colspan="2" |
+|}
+;Catatan
+* Pada saat [[BPOM|Badan Pengawas Obat dan Makanan]] Rapat dengan Komisi IX DPR RI mengumumkan ada 17 kejadian keracunan [[Makan Bergizi Gratis]] di 10 Provinsi diantaranya adalah sebagai berikut. Provinsi [[Kalimantan Utara]] di Kabupaten [[Kabupaten Nunukan|Nunukan]], Provinsi [[Gorontalo]], Provinsi [[Sulawesi Tenggara]]  di Kabupaten [[Kabupaten Bombana|Bombana]] dan [[Kota Kendari]], Provinsi [[Sulawesi Selatan]] di [[Kabupaten Takalar]], Provinsi [[Nusa Tenggara Timur]] di Kabupaten  [[Kabupaten Sumba Timur|Sumba Timur]], Provinsi [[Nusa Tenggara Barat]] di Kabupaten [[Kabupaten Lombok Tengah|Lombok Tengah]], Provinsi [[Jawa Tengah]] di Kabupaten [[Kabupaten Karanganyar|Karanganyar]], Kabupaten [[Kabupaten Batang|Batang]] dan Kabupaten [[Kabupaten Sukoharjo|Sukoharjo]], Provinsi [[Jawa Barat]] di Kabupaten [[Kabupaten Tasikmalaya|Tasikmalaya]], [[Kota Bandung]], [[Kota Bogor]], Kabupaten [[Kabupaten Cianjur|Cianjur]] dan Kabupaten [[Kabupaten Indramayu|Indramayu]], Provinsi [[Banten]] di Kabupaten [[Kabupaten Pandeglang|Pandeglang]] dan Provinsi [[Sumatera Selatan]] di Kabupaten [[Kabupaten Empat Lawang|Empat Lawang]] dan Kabupaten [[Kabupaten Penukal Abab Lematang Ilir|Penukal Abab Lematang Ilir]]<ref>{{Cite web|last=Prasetyo|first=Gatot Riswandi|date=2025-05-15|title=BPOM Catat 17 Kasus Keracunan Dalam Program MBG|url=https://www.satelitnews.com/137221/bpom-catat-17-kasus-keracunan-dalam-program-mbg/|website=Satelit News|language=id|access-date=2025-08-07}}</ref>
+
+=== Korea Selatan ===
+* Pada bulan Juni 2006, insiden keracunan makanan menimpa 1.700 siswa di 25 sekolah area Seoul setelah dilakukan pengalihan pengelolaan makanan yang awalnya dari perusahaan swasta, diubah menjadi diawasi langsung oleh pihak sekolah.<ref>{{Cite web|date=2006-06-27|title=1,000 students added to toll of those hit by food toxin|url=https://koreajoongangdaily.joins.com/2006/06/27/socialAffairs/1000-students-added-to-toll-of-those-hit-by-food-toxin/2742987.html|website=koreajoongangdaily.joins.com|language=en|access-date=2025-10-26}}</ref><ref>{{Cite news|date=2006-06-23|title=S Korea food poisoning affects 1,700 children|url=https://www.abc.net.au/news/2006-06-23/s-korea-food-poisoning-affects-1700-children/1785136|newspaper=ABC News|language=en-AU|access-date=2025-10-26}}</ref>
+
+== Referensi ==
+{{reflist}}

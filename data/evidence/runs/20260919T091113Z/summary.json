@@ -1,0 +1,33 @@
+{
+  "articles": 1316,
+  "cited": 308,
+  "discovered_only": 1008,
+  "decisions": {
+    "ambiguous": 176,
+    "linked": 685,
+    "weak": 5,
+    "none": 450
+  },
+  "cited_vs_text": {
+    "ambiguous_includes_cited": 42,
+    "agrees": 239,
+    "place_ok_but_dates_or_other_event": 10,
+    "place_not_named_in_lead": 10,
+    "place_ok_date_unknown": 7
+  },
+  "events": 459,
+  "events_in_feed_span": 437,
+  "events_resolved_cited_only": 9,
+  "events_resolved_with_discovery": 12,
+  "events_newly_resolved_by_discovery": 3,
+  "median_days_to_first_cause_finding": 7.5,
+  "findings": {
+    "mechanism: spoilage / off food": 54,
+    "mechanism: hygiene / sanitation": 65,
+    "mechanism: timing / storage / temperature": 35,
+    "lab_contamination": 12,
+    "sppg_halted": 34,
+    "awaiting_result": 103,
+    "lab_clean": 2
+  }
+}
