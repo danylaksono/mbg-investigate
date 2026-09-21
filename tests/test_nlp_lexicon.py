@@ -79,3 +79,12 @@ def test_a_modal_does_not_discount_a_genuine_finding_that_mentions_what_the_agen
     assert reports_a_lab_finding(
         "Hasil uji laboratorium menunjukkan adanya bakteri E. coli yang dapat menyebabkan diare.")
     assert reports_a_lab_finding("BGN menyebut insiden disebabkan nitrit yang tinggi.")
+
+
+def test_a_clean_lab_result_needs_a_lab_word_and_is_not_a_psychological_exam():
+    """Found by reading attributions: "hasil pemeriksaan psikologis ... komentar negatif" matched."""
+    assert not N.reports_lab_clean(
+        "Berdasarkan hasil pemeriksaan psikologis sebagian korban mengalami gangguan mental akibat komentar negatif.")
+    assert N.reports_lab_clean("Hasil uji sampel air dari dapur tersebut dinyatakan memenuhi syarat kesehatan.")
+    assert N.reports_lab_clean("Hasil uji laboratorium BPOM menunjukkan tidak ditemukan bakteri E. coli.")
+    assert not N.reports_lab_clean("Kami menunggu hasil uji laboratorium apakah sampel aman.")

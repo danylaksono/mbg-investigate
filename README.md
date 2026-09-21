@@ -167,6 +167,13 @@ dipicu bakteri pengurai dapat menyebabkan keracunan"). Each was fixed and pinned
 
 Tempo needs JavaScript and Beritasatu blocks crawlers, so both are excluded.
 
+**Official sources** (BGN, BPOM, Kemenkes, regional health offices) were piloted and not scaled: the
+pages that could be reached carry institutional news, not incident findings, and BGN blocks crawlers
+(HTTP 418, not circumvented). Official findings already arrive as officials quoted in the news, so
+every finding records who it is attributed to (`attributed_to`: health_body, programme_operator,
+police, local_government, school). Of the 51 events with a laboratory result, 31 name a health body,
+5 name only another official, and 15 name nobody nearby. See `docs/METHODOLOGY.md` sections 8.6 and 9.
+
 ### Retrying failures
 
 The machine sleeps during long crawls, which shows up as `network_error` rows (DNS lookups failing,
@@ -208,6 +215,31 @@ lead. Of those 10, about five look genuinely wrong (an Aceh Timur row citing a s
 Cianjur; Salatiga citing Karanganyar; Jakarta Selatan, Lampung Selatan and Metro citing
 provincial statements), four are national roundups or statements that cannot corroborate one
 incident, and one is a miss of the abbreviation "Pangkep". This is a review queue, not a verdict.
+
+## School register (pilot)
+
+The official register is Data Referensi Kemendikdasmen (`referensi.data.kemendikdasmen.go.id`): every
+school with NPSN, name, address and status, and latitude/longitude on each school's page. There is no
+bulk file that can be reached (the Satu Data portal's robots.txt disallows crawling), and a national
+crawl would be weeks of requests, so it was piloted on two regencies instead:
+
+```bash
+python analysis/schools_pilot.py "Kabupaten Bantul" "Kabupaten Bandung Barat"   # ~105 requests, 9 s + jitter
+python analysis/schools_pilot.py "Kabupaten Bantul" --reuse                     # reuse the saved lists
+```
+
+28 of 43 named incident venues (65%) matched a school uniquely, all with coordinates; 6 were ambiguous
+and 9 unmatched. Two Java regencies are not a national rate. Coordinates for matched venues only would
+read as a map of where incidents happened, so any use must show the match rate. Profile pages hold the
+principal's name and contacts, so only NPSN, name, address, status and coordinates are kept. Details:
+`docs/METHODOLOGY.md` section 8.7.
+
+## Human labelling (prepared)
+
+`python analysis/make_label_sample.py` draws a blind, stratified sample of cause sentences and writes
+`data/labelling/labelling_sheet.xlsx` (send this) and `labelling_key_PRIVATE.csv` (keep this).
+`python analysis/score_labels.py <labelled.xlsx> [<second.xlsx>]` reports precision, recall and
+labeller agreement with confidence intervals. See `docs/LABELLING.md`.
 
 ## Design decisions worth knowing
 

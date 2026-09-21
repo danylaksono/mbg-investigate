@@ -68,6 +68,17 @@ CAUSAL_START = re.compile(r"(?:disebabkan|dipicu|akibat|penyebab)", re.I)
 MODAL_AFTER = re.compile(r"\b(?:dapat|bisa|berpotensi|berisiko|mampu)\b", re.I)
 
 
+LAB_CONTEXT = re.compile(r"laborat|labkesda|\bb?bpom\b|sampel|\buji\b|pengujian|bakteri|e\.?\s?-?coli|swab|mikrobiolog", re.I)
+
+
+def reports_lab_clean(sentence: str) -> bool:
+    """A laboratory result reported clean. "Negatif" or "aman" alone is not enough: "hasil pemeriksaan
+    psikologis ... komentar negatif" is not a lab result, so a lab word must be present."""
+    return (bool(LAB_NEGATIVE.search(sentence)) and bool(LAB_CONTEXT.search(sentence))
+            and not re.search(r"psikolog", sentence, re.I)
+            and not re.search(r"\b(?:belum|menunggu|apakah|akan|jika|bila)\b", sentence, re.I))
+
+
 def reports_lab_finding(sentence: str) -> bool:
     """A sentence that states a laboratory finding. A hedge or negation counts only if it comes
     before or inside the finding: "dari hasil lab ada kandungan bakteri, dan tidak menemukan
@@ -178,7 +189,7 @@ def certainty(text: str) -> str:
     sents = sentences(text)
     if any(reports_lab_finding(x) for x in sents):
         return "lab: contamination reported"
-    if any(LAB_NEGATIVE.search(x) and not re.search(r"\b(?:belum|menunggu|apakah|akan|jika|bila)\b", x, re.I) for x in sents):
+    if any(reports_lab_clean(x) for x in sents):
         return "lab: result reported clean"
     if AWAITING.search(text):
         return "awaiting lab / cause unknown"

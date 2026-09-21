@@ -66,32 +66,61 @@ def agents_in(sentence: str) -> list[str]:
     return [name for rx, name in AGENT_NAMES if rx.search(sentence)]
 
 
+# Who is the finding attributed to? Lab results reach us through journalists quoting officials, so this is
+# the "grain of salt" made explicit. A health office or laboratory reporting a sample is one thing; the
+# programme's own operator (BGN, a kitchen, its foundation) or a politician saying the food was fine is
+# an interested party. The classes are stored, not scored: the reader decides what to trust.
+ATTRIBUTION = {
+    "health_body": re.compile(
+        r"dinas\s+kesehatan|\bdinkes\w*|labkesda|laboratorium\s+kesehatan|\bbb?pom\b|balai\s+(?:besar\s+)?pengawas\s+obat|"
+        r"kemenkes|menkes|kementerian\s+kesehatan|\bbtkl\b|puskesmas|\brsud\b|dokter|\bdr\.?\s|epidemiolog|"
+        r"kepala\s+bidang\s+(?:kesehatan|p2p)", re.I),
+    "programme_operator": re.compile(
+        r"\bbgn\b|badan\s+gizi|\bsppg\b|satuan\s+pelayanan|satgas\s+mbg|mitra\s+mbg|yayasan|kepala\s+dapur|penyedia", re.I),
+    "police": re.compile(r"polres|polsek|polda|polisi|kapolres|kasat|kepolisian|penyidik|labfor", re.I),
+    "local_government": re.compile(
+        r"bupati|wali\s?kota|gubernur|\bwagub\b|wakil\s+(?:bupati|wali)|\bsekda\b|pemkab|pemkot|pemprov|pemda|\bdprd\b", re.I),
+    "school": re.compile(r"kepala\s+sekolah|\bkepsek\b|\bguru\b|komite\s+sekolah|pihak\s+sekolah", re.I),
+}
+
+
+def attribution(sentence: str, previous: str = "") -> list[str]:
+    """Bodies named in the sentence or the one before it (the speaker is often introduced there:
+    "Kepala Dinkes X mengatakan... Ia menyebut hasil lab..."). Empty means unattributed."""
+    context = f"{previous} {sentence}"
+    return [name for name, rx in ATTRIBUTION.items() if rx.search(context)]
+
+
 def to_date(value) -> date | None:
     iso = A.iso_date(value) if isinstance(value, str) else ""
     return date.fromisoformat(iso) if iso else None
 
 
 def findings_for(text: str) -> list[dict]:
-    """Quoted sentences worth keeping as evidence, at most one per kind per article."""
+    """Quoted sentences worth keeping as evidence, at most one per kind per article. Each carries
+    `attributed_to`: the bodies named in that sentence or the one before it."""
     out, seen = [], set()
+    sents = N.sentences(text)
 
-    def add(kind, sentence, **extra):
+    def add(kind, i, **extra):
         if kind not in seen:
             seen.add(kind)
-            out.append({"kind": kind, "sentence": sentence[:400], "char_start": text.find(sentence[:80]), **extra})
+            sentence = sents[i]
+            out.append({"kind": kind, "sentence": sentence[:400], "char_start": text.find(sentence[:80]),
+                        "attributed_to": attribution(sentence, sents[i - 1] if i else ""), **extra})
 
-    for s in N.sentences(text):
+    for i, s in enumerate(sents):
         if N.reports_lab_finding(s):
-            add("lab_contamination", s, agents=agents_in(s))
-        elif N.LAB_NEGATIVE.search(s) and not re.search(r"\b(?:belum|menunggu|apakah|akan|jika|bila)\b", s, re.I):
-            add("lab_clean", s)
+            add("lab_contamination", i, agents=agents_in(s))
+        elif N.reports_lab_clean(s):
+            add("lab_clean", i)
         elif N.AWAITING.search(s):
-            add("awaiting_result", s)
+            add("awaiting_result", i)
         if N.RESPONSE["SPPG halted / closed"].search(s):
-            add("sppg_halted", s)
+            add("sppg_halted", i)
         for name, rx in N.MECHANISM.items():
             if name.startswith(("spoilage", "timing", "hygiene")) and rx.search(s):
-                add(f"mechanism: {name.split(' (')[0]}", s)
+                add(f"mechanism: {name.split(' (')[0]}", i)
     return out
 
 
@@ -203,12 +232,23 @@ def main() -> int:
         start = link.event_keys([e.to_dict()])
         lag = (resolved_dates[0] - start[0].start).days if resolved_dates and start else None
         agents = sorted({a for f in findings if e.event_id in f["event_ids"] for a in f.get("agents", [])})
+        result_findings = [f for f in findings if e.event_id in f["event_ids"] and f["kind"] in ("lab_contamination", "lab_clean")]
+        who = sorted({b for f in result_findings for b in f["attributed_to"]})
+        if not result_findings:
+            attributed = ""
+        elif "health_body" in who:
+            attributed = "health_body"          # a health office or laboratory is named as the source
+        elif who:
+            attributed = "other_official_only"  # only the programme operator, police, a politician or a school
+        else:
+            attributed = "unattributed"
         rows.append({"event_id": e.event_id, "date_start": e.date_start, "kabkota": e.kabkota, "province": e.province,
                      "cited_articles": len(cited_only), "discovered_articles": sum(1 for i in items if i["via"] == "link"),
                      "state_cited_only": citb, "state_all": allb,
                      "resolved_by_discovery": citb not in RESOLVED and allb in RESOLVED,
                      "first_cause_finding_date": str(resolved_dates[0]) if resolved_dates else "",
-                     "days_to_first_cause_finding": lag, "agents": json.dumps(agents)})
+                     "days_to_first_cause_finding": lag, "agents": json.dumps(agents),
+                     "result_attributed_to": attributed, "result_attribution_classes": json.dumps(who)})
     summ = pd.DataFrame(rows)
 
     def dump(name, records):
@@ -235,6 +275,7 @@ def main() -> int:
         "median_days_to_first_cause_finding": (None if summ.days_to_first_cause_finding.dropna().empty
                                                else float(summ.days_to_first_cause_finding.dropna().median())),
         "findings": dict(Counter(f["kind"] for f in findings)),
+        "resolved_events_by_attribution": dict(Counter(summ[summ.state_all.isin(RESOLVED)].result_attributed_to)),
     }
     (run_dir / "summary.json").write_text(json.dumps(headline, indent=2, ensure_ascii=False), encoding="utf-8")
     inputs = {str(p.relative_to(ROOT)): sha256_file(p) for p in [

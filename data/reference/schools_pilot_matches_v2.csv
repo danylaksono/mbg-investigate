@@ -1,0 +1,45 @@
+kab,venue,level,result,tier,register,was
+Kabupaten Bantul,SD 2 Bakulan,primary,none,,,none
+Kabupaten Bantul,SMPN 1 jetis,junior_secondary,matched,name,SMP NEGERI 1 JETIS,matched
+Kabupaten Bantul,SMPN 3 Jetis,junior_secondary,matched,name,SMP NEGERI 3 JETIS,matched
+Kabupaten Bantul,SMP Muhammadiyah Pulokasang,junior_secondary,none,,,none
+Kabupaten Bantul,SMAN 1 Jetis,senior_secondary,matched,name,SMA Negeri 1 Jetis,matched
+Kabupaten Bantul,6 SD (Spesifik tidak disebutkan),,no venue,,,
+Kabupaten Bantul,SDN Monggang,primary,ambiguous,name,SD NEGERI MONGGANG; SD NEGERI MONGGANG,ambiguous
+Kabupaten Bantul,SD Negeri Kategan,primary,matched,name,SD NEGERI KATEGAN,matched
+Kabupaten Bantul,SMPN 3 Jetis,junior_secondary,matched,name,SMP NEGERI 3 JETIS,matched
+Kabupaten Bantul,SMP Muhammadiyah,junior_secondary,ambiguous,name,SMP MUHAMMADIYAH SRANDAKAN; SMP MUHAMMADIYAH SANDEN; SMP MUHAMMADIYAH KRETEK,ambiguous
+Kabupaten Bantul,SDN Kowang,primary,matched,name,SD NEGERI KOWANG,matched
+Kabupaten Bantul,TK KB Mawar Harapan,early_childhood,none,,,none
+Kabupaten Bantul,KB Teratai Ceria,early_childhood,matched,name,KB TERATAI CERIA,matched
+Kabupaten Bantul,SDN 1 Sumberagung,primary,matched,name,SD NEGERI 1 SUMBERAGUNG,ambiguous
+Kabupaten Bantul,SD Patalan,primary,matched,name,SD NEGERI PATALAN BARU,ambiguous
+Kabupaten Bantul,SD Sawahan,primary,matched,name,SD NEGERI SAWAHAN,matched
+Kabupaten Bantul,SD Kembangsongo,primary,matched,name,SD NEGERI KEMBANGSONGO,matched
+Kabupaten Bandung Barat,SD Negeri Cipari,primary,matched,name,SD NEGERI CIPARI,matched
+Kabupaten Bandung Barat,MTs Darul Fiqri,junior_secondary,none,,,none
+Kabupaten Bandung Barat,SMK Pembangunan Bandung Barat,senior_secondary,matched,name,SMK PEMBANGUNAN BANDUNG BARAT,ambiguous
+Kabupaten Bandung Barat,TK Nurul Saadah,early_childhood,none,,,none
+Kabupaten Bandung Barat,SMP Ciparai,junior_secondary,none,,,none
+Kabupaten Bandung Barat,SMK Karya Perjuangan,senior_secondary,matched,name,SMK KARYA PERJUANGAN,matched
+Kabupaten Bandung Barat,MTs Manarul Huda,junior_secondary,matched,spelling,MTSS MANAARUL HUDA,none
+Kabupaten Bandung Barat,SDN 1 Cihampelas,primary,matched,name,SD NEGERI 1 CIHAMPELAS,ambiguous
+Kabupaten Bandung Barat,MTs Al Mukhtariyah,junior_secondary,ambiguous,name,MTSS NURUL MUKHTARIYAH; MTSS AL-MUKHTARIYAH MANDE; MTSS AL-MUKHTARIYAH RAJAMANDALA,none
+Kabupaten Bandung Barat,SMKN 1 Cihampelas,senior_secondary,matched,name,SMKN 1 CIHAMPELAS,matched
+Kabupaten Bandung Barat,MA Al Mukhtariyah,senior_secondary,matched,name,MAS AL MUKHTARIYAH MANDE,none
+Kabupaten Bandung Barat,SMPN 1 Cisarua,junior_secondary,matched,name,SMP NEGERI 1 CISARUA,matched
+Kabupaten Bandung Barat,SDN 1 Garuda,primary,none,,,none
+Kabupaten Bandung Barat,SD Negeri 1 Barukai,primary,none,,,none
+Kabupaten Bandung Barat,SMKN 1 Cisarua,senior_secondary,matched,name,SMK NEGERI 1 CISARUA,matched
+Kabupaten Bandung Barat,SMP Karya Prestasi Mandiri,junior_secondary,matched,name,SMP KARYA PRESTASI MANDIRI PADALARANG,matched
+Kabupaten Bandung Barat,SMK Widya Karya,senior_secondary,matched,name,SMKS WIDYA KARYA PADALARANG,none
+Kabupaten Bandung Barat,pesantren Bani Sulaiman,pesantren,none,,,none
+Kabupaten Bandung Barat,SMPN 1 Lembang,junior_secondary,matched,name,SMP NEGERI 1 LEMBANG,matched
+Kabupaten Bandung Barat,SDN 1 Cibodas,primary,ambiguous,name,SD NEGERI CIBODAS 1; SD NEGERI 1 CIBODAS,ambiguous
+Kabupaten Bandung Barat,SDN 2 Cibodas,primary,ambiguous,name,SD NEGERI 2 CIBODAS; SD NEGERI 2 CIBODAS,ambiguous
+Kabupaten Bandung Barat,SDN 1 Sutenjaya,primary,matched,spelling,SD NEGERI 1 SUNTENJAYA,none
+Kabupaten Bandung Barat,SDN Buahbatu,primary,matched,name,SD NEGERI BUAHBATU,matched
+Kabupaten Bandung Barat,SMPN 4 Lembang,junior_secondary,matched,name,SMP NEGERI 4 LEMBANG,matched
+Kabupaten Bandung Barat,SMK Putra Nasional Cibodas,senior_secondary,matched,name,SMK SWASTA PUTRA NASIONAL CIBODAS,matched
+Kabupaten Bandung Barat,SMP Bina Karya,junior_secondary,matched,name,SMP BINA KARYA NGAMPRAH,matched
+Kabupaten Bandung Barat,SDN 2 Cipeundeuy,primary,ambiguous,name,SD NEGERI 2 CIPEUNDEUY; SD NEGERI 2 CIPEUNDEUY,ambiguous

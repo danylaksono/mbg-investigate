@@ -1,0 +1,43 @@
+{
+  "evidence_run": "20260919T232808Z",
+  "seed": 20260920,
+  "quotas": {
+    "FLAG_CONTAMINATION": 18,
+    "FLAG_CLEAN": 11,
+    "FLAG_AWAITING": 5,
+    "UNFLAGGED_HIGH": 24,
+    "UNFLAGGED_STRONG": 14,
+    "UNFLAGGED_WEAK": 8
+  },
+  "repeats": 4,
+  "pool_sizes": {
+    "FLAG_CONTAMINATION": 136,
+    "FLAG_CLEAN": 11,
+    "FLAG_AWAITING": 752,
+    "UNFLAGGED_HIGH": 178,
+    "UNFLAGGED_STRONG": 2579,
+    "UNFLAGGED_WEAK": 8757
+  },
+  "items": 82,
+  "drawn": {
+    "UNFLAGGED_HIGH": 24,
+    "FLAG_CONTAMINATION": 18,
+    "UNFLAGGED_STRONG": 14,
+    "FLAG_CLEAN": 9,
+    "UNFLAGGED_WEAK": 8,
+    "FLAG_AWAITING": 5
+  },
+  "labels": [
+    "LAB_FINDING",
+    "LAB_CLEAN",
+    "AWAITING",
+    "CAUSE_SPECULATION",
+    "NONE"
+  ],
+  "about": [
+    "YES",
+    "NO_OTHER_INCIDENT",
+    "NO_GENERAL",
+    "UNSURE"
+  ]
+}

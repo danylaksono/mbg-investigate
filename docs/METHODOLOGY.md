@@ -321,6 +321,85 @@ Selatan / Lampung Selatan / Metro citing provincial statements), 4 are national 
 statements that cannot corroborate one incident, and 1 is a miss on the abbreviation "Pangkep". It
 is a review queue, not a verdict.
 
+### 8.6 Official sources (pilot, negative result)
+
+The question was whether official bodies publish incident lab results that never reached the press,
+and in particular whether regional health offices (Dinkes) do. A small pilot tested it before any
+crawler was built. Wikipedia cites 2 official (.go.id) pages among 443 references, and the news text
+almost never links one, so this was untouched ground.
+
+| source | what was found |
+|---|---|
+| BGN (bgn.go.id) | Returns HTTP 418 to the crawler, a deliberate bot block. Not circumvented. `bgn.lapor.go.id`, seen in one article, is a citizen-complaints portal, a different dataset. |
+| BPOM (pom.go.id) | robots.txt allows it. First page of press releases and of public clarifications: food-regulation rules, export rules, product recalls. Nothing on MBG incidents. |
+| Kemenkes | Release listing did not parse on one page; not pursued. |
+| Regional health offices | 12 hosts probed (two requests each, 9 s apart): 3 returned 403, 3 did not resolve (some guessed domains were probably wrong, and the machine sleeps), 3 had no search API, and **one** answered a WordPress search (Dinkes Jawa Tengah). Its 11 queries returned 45 distinct posts, 6 touching poisoning, MBG or lab terms, and **none was an incident report**: the Nov 2024 MBG launch, a KLB workshop, coordination meetings. |
+
+Conclusion: the health offices reachable here publish institutional news, not incident findings.
+They give lab results to reporters, and reporters quote them. This is visible in the data: most of
+the 51 resolved events rest on a sentence such as "Kepala Dinas Kesehatan Kota Bandung ... dari lima
+sampel yang dikirim ke Labkesda", so **official findings already reach the dataset through
+journalists**. Crawling several hundred regency sites one by one would search only for results that
+were never given to the press, and the heterogeneity (different CMSs, blocks, dead domains) makes
+that a poor use of requests. It was not built, and no `sources` stage was added to the pipeline.
+
+The open sources of doubt are handled in the data instead (section 9): every finding records whom it
+is attributed to.
+
+### 8.7 School register and coordinates (pilot)
+
+Aim: a list of schools with coordinates, to place incident venues on a map and support later analysis
+(school level, distance, rural/urban).
+
+**What exists.** The official register is Data Referensi Kemendikdasmen
+(`referensi.data.kemendikdasmen.go.id`; the old `kemdikbud.go.id` hostnames no longer resolve). It
+is browsable province -> regency -> district -> school list (NPSN, name, address, village, status), and each school's
+profile page carries latitude and longitude. It has no robots.txt. There is **no bulk download that can be
+reached**: the Satu Data portal (`data.kemendikdasmen.go.id`) has `Disallow: /` and was not crawled;
+Dapodik and the geoportal are JavaScript apps with nothing to follow; the GitHub datasets are scrapers of
+this same portal. OpenStreetMap was measured and rejected as a substitute: 198 named schools in the
+Jombang area against 1,089 in the register (about 18%), with no NPSN tags, so mixing it in would create a
+coverage artefact that reads as a geographic pattern. Madrasah and pesantren are partly Kemenag's
+(EMIS), not this portal's; the pesantren venues (32 rows) match poorly for that reason.
+
+**Why not a national load.** The province table alone lists about 230,000 primary and junior secondary
+schools, and coordinates exist only on each school's own page: hundreds of thousands of requests, weeks at
+a polite pace. Not attempted. Loading only the schools that matched incident venues would be cheaper but
+would produce a map of where incidents happened, so the decision rests on the match rate.
+
+**Pilot: two regencies** (`analysis/schools_pilot.py`; Bantul and Bandung Barat, 5,138 schools listed
+over about 105 requests at 9 s plus jitter). It lists every district in three levels (dikdas: SD/SMP and
+MI/MTs; dikmen: SMA/SMK/MA; paud: TK/KB), matches each incident venue by name, and fetches coordinates
+only for unique matches. The matcher requires the same school type and number, then tries tiers in
+order: venue words in the school **name**; only if none, its address and village (labelled `address`);
+only after that near-identical spellings (labelled `spelling`, ratio 0.86). Two or more candidates in a
+tier make the venue `ambiguous`, never guessed.
+
+| | first matcher | after reading the misses |
+|---|---|---|
+| unique match | 20 of 43 named venues (47%) | **28 (65%)**: 26 by name, 2 by spelling |
+| ambiguous | 9 | 6 |
+| no match | 14 | 9 |
+
+The first pass missed for fixable reasons: the register writes private schools with a trailing S
+(MTSS, SMKS, MAS), addresses were matched before names ("SDN 1 Sumberagung" matched a school whose
+village is Sumberagung), and spelling differs (Fiqri/Fikri, Sutenjaya/Suntenjaya). The remaining
+ambiguous venues are genuine: "SDN 2 Cibodas" appears twice in the register, in different districts.
+All 28 matched schools have coordinates, and every one lies within 24 km of its regency's centre (7 km
+in Bantul; Bandung Barat is larger), a plausibility check that passes. Named-venue coverage is 90% of rows overall
+(54% where the venue level is unknown), so the reachable ceiling is about the 90% named rows times the
+match rate.
+
+**Limits.** Two Java regencies with well-kept registers and conventional names; eastern Indonesia,
+pesantren, kindergartens and community health posts will match worse, so 65% must not be read as a national
+rate. Coordinates would exist only for matched venues, so any map must show unmatched venues and the
+match rate alongside. Ambiguity between same-named schools could be resolved from the article text
+(district names) but is not. Not built as a pipeline stage.
+
+**Privacy.** Profile pages include the principal's name and contact details. Only NPSN, name, address,
+status and coordinates are extracted, and raw profile pages are not stored. Listing pages contain no
+personal data and are kept (gzipped, with a manifest) under `data/raw/schools_pilot/`.
+
 ## 9. Cause findings and event-level analysis
 
 Implemented in `analysis/build_evidence.py`.
@@ -330,6 +409,16 @@ Implemented in `analysis/build_evidence.py`.
   Each carries its character offset in the cached text, so it can be checked against the page.
   Agents are normalised (E. coli, Salmonella, Staphylococcus, Bacillus, nitrite/nitrate,
   histamine, unspecified bacteria, chemical, virus).
+- **Attribution ("a grain of salt", made explicit).** Lab results reach the dataset as officials
+  quoted by journalists, and officials are not neutral: the programme's own operator (BGN, a kitchen,
+  its foundation) or a politician saying the food was fine is an interested party. Each finding
+  therefore records `attributed_to`: the bodies named in that sentence or the one before it (the
+  speaker is often introduced there). Classes: `health_body` (Dinkes, Labkesda, BPOM/BBPOM, Kemenkes,
+  puskesmas, hospitals, doctors), `programme_operator` (BGN, SPPG, Satgas MBG, foundations),
+  `police`, `local_government` and `school`. Classes are stored, not scored: the reader decides
+  what to trust. Per event, `result_attributed_to` is `health_body` if any result finding names a
+  health body, else `other_official_only`, else `unattributed`. **"Unattributed" is a floor on
+  unofficial sourcing**, not proof of it: the article may name the speaker elsewhere.
 - **Event state = best state across all articles linked to the event**, cited or discovered:
   contamination reported > clean > awaiting > samples taken > no cause information > no article read.
   An event counts as *resolved* when an article reports a lab contamination or clean result.
@@ -357,12 +446,14 @@ Implemented in `analysis/build_evidence.py`.
 | Lab-finding **recall** | Read a random sample of 60 sentences containing strong cause vocabulary that were **not** flagged (`analysis/recall_audit.py`, seed 7) | About 8% (5 of 60) were genuine lab findings the rules missed, mostly passive and "kandungan bakteri" phrasings, plus a splitter that cut "E. coli" in half. Fixed. |
 | Widened rule | Read every newly flagged sentence | 10 of 11 genuine (one was commentary) |
 | All-outlet findings | Read the first finding for each of the 52 events the five-outlet run resolved | 51 stood. One was a false positive (a generic explainer, "nitrat yang dipicu bakteri pengurai **dapat** menyebabkan keracunan", which resolved a Cianjur event it did not concern): a modal after a bare causal phrase now marks an explainer, pinned as a test. Softer cases that remain counted: a preliminary "uji awal positif E.coli" still awaiting official results (Bandar Lampung), a result described as "beberapa waktu lalu" that may belong to an earlier incident (Gunungkidul), a lab finding of three bacteria with the cause "not concluded" (Karo), and clean results counted as results (4 events). |
-| Regression | 175 automated tests, offline | Pass. Sentences from each audit are pinned as tests. |
+| Attribution | Read the resolving finding of each attribution class | Caught a false "clean" result: "hasil pemeriksaan **psikologis** ... komentar **negatif**" matched the clean-result rule. A lab word is now required and psychological exams are excluded; pinned as a test. The Karo event's state did not change (contamination outranks it). |
+| Official sources | Pilot against Dinkes Jawa Tengah, BPOM and Kemenkes (section 8.6) | No incident reports found; BGN blocks crawlers. Not scaled. |
+| Regression | 207 automated tests, offline | Pass. Sentences from each audit are pinned as tests. |
 
 **Who did the reading:** the samples above were read and judged by the analyst working on this
 project (an AI assistant), not by independent human annotators. They are spot-checks, not a
-measured accuracy. A hand-labelled sample by a human coder would be the proper next check, and
-would tell whether the recall improvement holds.
+measured accuracy. A blind, stratified sample for human coders, with scoring code, is prepared
+(`docs/LABELLING.md`); it has not yet been labelled, so no human-measured accuracy exists yet.
 
 ## 11. Known limitations and biases
 
@@ -382,7 +473,13 @@ would tell whether the recall improvement holds.
 - **Articles are first-day reports.** "Awaiting lab" reflects when the article was written. It says
   nothing about what the laboratory eventually found.
 - **Absence of a published result is not absence of a result.** Results may exist in official
-  documents that were not searched.
+  documents that were not searched. The pilot found no incident reports on the health-office and
+  BPOM pages it reached, BGN's site blocks crawlers, and the rest of the regional health offices were
+  not systematically searched (section 8.6).
+- **Findings are officials' statements, relayed.** Nearly every result is a health office, BPOM, the
+  programme operator or a politician quoted in the press. Attribution is recorded (section 9), but
+  interests differ: a result attributed only to the operator or a local government, or a "clean"
+  result, deserves more caution than one attributed to a laboratory or health office.
 - **Conservative linking undercounts.** Headline-or-lead matching, a 30-day window and the
   refusal to resolve ambiguity all trade recall for precision. A follow-up that names the place
   only in the body is `weak` and does not count. Kompas is only partly crawled (linked and
@@ -447,11 +544,16 @@ wikitext and the evidence runs preserve the version analysed here.
 | Assigning ambiguous articles to the nearest event | Silent overcounting that is invisible in aggregates |
 | A `revisions` history and a JPPI/WordPress channel (in the first draft) | Never built; revision timestamps are an editorial-attention series and must not be plotted as incidence |
 | Wayback retry for the 117 failed URLs | archive.org was rate-limiting; deferred, not abandoned |
+| Crawling regional health-office sites one by one | Pilot found no incident reports and heterogeneous, often blocked or dead sites (section 8.6) |
+| Getting around BGN's block (HTTP 418) | A deliberate bot block; not circumvented |
+| Crawling the national school register | About 230,000 SD/SMP schools alone and coordinates only on each profile page: weeks of requests (section 8.7) |
+| Crawling the Satu Data portal for a bulk school file | `robots.txt` says `Disallow: /` |
+| OpenStreetMap as the school list | About 18% of a regency's schools, no NPSN; would create a coverage artefact (section 8.7) |
 | Fixing the region dump upstream | Handled by an alias in this project |
 
 ## 14. Status at the time of writing
 
-All stages are complete. The authoritative numbers are in `data/evidence/runs/20260919T201142Z/summary.json`
+All stages are complete. The authoritative numbers are in `data/evidence/runs/20260919T232808Z/summary.json`
 (`data/evidence/LATEST` names the newest run).
 
 - Structured layer and the cited-article corpus: revision 29900932; 842 rows, 459 events, 308 of
@@ -472,11 +574,23 @@ All stages are complete. The authoritative numbers are in `data/evidence/runs/20
   Staphylococcus 3, nitrite 2, histamine 1, other chemical 1. 176 events still read "awaiting
   results" after every article. Earlier runs, made with looser lexicons and fewer outlets, are kept
   in `data/evidence/runs/` so the effect of each change can be traced.
+- **Who the 51 results are attributed to** (section 9): **31 name a health body** (Dinkes, Labkesda,
+  BPOM, Kemenkes and the like), 5 name only another official (the programme operator, police, a
+  politician or a school), and 15 name nobody in or just before the sentence (a floor, since the
+  article may name the speaker elsewhere). Of the 4 events whose result is "clean", 3 are
+  unattributed and 1 is attributed to a health body; clean results deserve the most caution.
+- **School register and coordinates** were piloted on two regencies (section 8.7): 28 of 43 named
+  venues (65%) matched a school uniquely, all with coordinates; 6 ambiguous, 9 unmatched. Not scaled and
+  not a pipeline stage. The lists and matches are local reference files under `data/reference/`.
+- **Official sources** were piloted and not scaled (section 8.6): the reachable health offices and
+  BPOM pages carry institutional news, not incident findings, and BGN blocks crawlers.
 - **Not resolved by these data:** 89% of events. That does not mean their causes were never found.
   It means no article in these five outlets, within 30 days, reported a laboratory result the
-  regexes recognised. Official documents were not searched, the blocked publishers are missing, and
-  recall is spot-checked, not measured (section 10).
-- Open next steps: a human-labelled sample to measure recall; testing whether a longer link window
+  regexes recognised. The blocked publishers are missing, most regional health offices were not
+  searched, and recall is spot-checked, not yet measured by people, and a sample this size can only bound it (section 10).
+- **Human labelling** is prepared but not done: an 84-item blind sheet with scoring code (`docs/LABELLING.md`). It
+  measures precision and the miss rate among agent-plus-lab-word sentences; overall recall can only be bounded at this size.
+- Open next steps: getting the sample labelled by two people and scoring it; testing whether a longer link window
   recovers late results without adding ambiguity; the Wayback retry of the 117 failed
-  Wikipedia-cited URLs once archive.org stops rate-limiting; and official sources (BPOM, BGN and
-  regional health offices).
+  Wikipedia-cited URLs once archive.org stops rate-limiting; and, if official documents are wanted,
+  the DPR hearing records (BGN, BPOM and Kemenkes reporting to Komisi IX), which were not tried.

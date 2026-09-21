@@ -30,7 +30,7 @@ STRONG = re.compile(
 
 def flagged(sentence: str) -> bool:
     return bool(N.reports_lab_finding(sentence)
-                or N.LAB_NEGATIVE.search(sentence) or N.AWAITING.search(sentence))
+                or N.reports_lab_clean(sentence) or N.AWAITING.search(sentence))
 
 
 def main(argv=None) -> int:

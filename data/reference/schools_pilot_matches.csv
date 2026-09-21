@@ -1,0 +1,45 @@
+kabkota,venue,level,result,tier,npsn,lat,lng,km_from_regency_centre
+Kabupaten Bantul,SD 2 Bakulan,primary,none,,,,,
+Kabupaten Bantul,SMPN 1 jetis,junior_secondary,matched,name,20400299,-7.8911,110.3759,5.3
+Kabupaten Bantul,SMPN 3 Jetis,junior_secondary,matched,name,20400327,-7.9263,110.3508,5.1
+Kabupaten Bantul,SMP Muhammadiyah Pulokasang,junior_secondary,none,,,,,
+Kabupaten Bantul,SMAN 1 Jetis,senior_secondary,matched,name,20400391,-7.8903,110.3747,5.2
+Kabupaten Bantul,6 SD (Spesifik tidak disebutkan),,no venue named,,,,,
+Kabupaten Bantul,SDN Monggang,primary,ambiguous,name,"20400519,20400272",,,
+Kabupaten Bantul,SD Negeri Kategan,primary,matched,name,20400231,-7.9493,110.3504,7.4
+Kabupaten Bantul,SMPN 3 Jetis,junior_secondary,matched,name,20400327,-7.9263,110.3508,5.1
+Kabupaten Bantul,SMP Muhammadiyah,junior_secondary,ambiguous,name,"20400321,20400323,20400313",,,
+Kabupaten Bantul,SDN Kowang,primary,matched,name,20400215,-7.9038,110.3605,4.1
+Kabupaten Bantul,TK KB Mawar Harapan,early_childhood,none,,,,,
+Kabupaten Bantul,KB Teratai Ceria,early_childhood,matched,name,69812895,-7.923234,110.350639,4.8
+Kabupaten Bantul,SDN 1 Sumberagung,primary,matched,name,20400740,-7.8999,110.3656,4.4
+Kabupaten Bantul,SD Patalan,primary,matched,name,20400254,-7.9238,110.3514,4.9
+Kabupaten Bantul,SD Sawahan,primary,matched,name,20400513,-7.9076,110.3615,4.4
+Kabupaten Bantul,SD Kembangsongo,primary,matched,name,20400201,-7.891,110.386,6.4
+Kabupaten Bandung Barat,SD Negeri Cipari,primary,matched,name,20207434,-6.9301,107.3536,16.9
+Kabupaten Bandung Barat,MTs Darul Fiqri,junior_secondary,none,,,,,
+Kabupaten Bandung Barat,SMK Pembangunan Bandung Barat,senior_secondary,matched,name,69899323,-6.9113,107.3331,18.3
+Kabupaten Bandung Barat,TK Nurul Saadah,early_childhood,none,,,,,
+Kabupaten Bandung Barat,SMP Ciparai,junior_secondary,none,,,,,
+Kabupaten Bandung Barat,SMK Karya Perjuangan,senior_secondary,matched,name,20268297,-6.9431,107.3527,17.6
+Kabupaten Bandung Barat,MTs Manarul Huda,junior_secondary,matched,spelling,20279449,-6.942978,107.352358,17.7
+Kabupaten Bandung Barat,SDN 1 Cihampelas,primary,matched,name,20208143,-6.9294,107.4756,7.4
+Kabupaten Bandung Barat,MTs Al Mukhtariyah,junior_secondary,ambiguous,name,"20279493,20279401,20279429",,,
+Kabupaten Bandung Barat,SMKN 1 Cihampelas,senior_secondary,matched,name,20252563,-6.9334,107.4616,8.3
+Kabupaten Bandung Barat,MA Al Mukhtariyah,senior_secondary,matched,name,20280006,-6.931,107.4605,8.1
+Kabupaten Bandung Barat,SMPN 1 Cisarua,junior_secondary,matched,name,20206036,-6.8076,107.5696,10.7
+Kabupaten Bandung Barat,SDN 1 Garuda,primary,none,,,,,
+Kabupaten Bandung Barat,SD Negeri 1 Barukai,primary,none,,,,,
+Kabupaten Bandung Barat,SMKN 1 Cisarua,senior_secondary,matched,name,69888925,-6.810411308082,107.567988403403,10.4
+Kabupaten Bandung Barat,SMP Karya Prestasi Mandiri,junior_secondary,matched,name,20279913,-6.8429,107.4736,3.2
+Kabupaten Bandung Barat,SMK Widya Karya,senior_secondary,matched,name,20228558,-6.8429,107.4735,3.2
+Kabupaten Bandung Barat,pesantren Bani Sulaiman,pesantren,none,,,,,
+Kabupaten Bandung Barat,SMPN 1 Lembang,junior_secondary,matched,name,20206053,-6.8132,107.6206,15.3
+Kabupaten Bandung Barat,SDN 1 Cibodas,primary,ambiguous,name,"20207857,20207844",,,
+Kabupaten Bandung Barat,SDN 2 Cibodas,primary,ambiguous,name,"20207839,20207840",,,
+Kabupaten Bandung Barat,SDN 1 Sutenjaya,primary,matched,spelling,20205992,-6.8365,107.7098,24.3
+Kabupaten Bandung Barat,SDN Buahbatu,primary,matched,name,20206924,-6.8241,107.6836,21.6
+Kabupaten Bandung Barat,SMPN 4 Lembang,junior_secondary,matched,name,20227807,-6.8183,107.6775,21.1
+Kabupaten Bandung Barat,SMK Putra Nasional Cibodas,senior_secondary,matched,name,69816315,-6.8263,107.6746,20.6
+Kabupaten Bandung Barat,SMP Bina Karya,junior_secondary,matched,name,20252485,-6.8152,107.5132,6.0
+Kabupaten Bandung Barat,SDN 2 Cipeundeuy,primary,ambiguous,name,"20207509,20207510",,,

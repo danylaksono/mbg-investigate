@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-09-20T02:09:17+00:00",
+  "link_rules_version": "2026-09-19.1",
+  "lexicon_sha256": "83b3aad3d583f8b5ceed283427ed3164550d8b522b3024fa4cc8a105e2c2d584",
+  "inputs_sha256": {
+    "data\\processed\\events.csv": "425bfd582061a56c302e72a3f6c37611e25d11063443afc937ecace34550946f",
+    "data\\processed\\incidents.csv": "c69f41dca5dd7a9c1a099a5b6ba5f316f5b6aafc75a7e2addf599ad9f7699fd4",
+    "data\\processed\\corpus.jsonl": "4ac8a288c3978ef33694749cd450fc73867dad2d73d1fd109f2da4e7f2b756b6",
+    "data\\interim\\discovered\\antara.tag.jsonl": "3a80df70e4ee2d06ead2e97b560dab4be5e9d3d18ba23d38337fd1d058b6fcce",
+    "data\\interim\\discovered\\cnn.tag.jsonl": "ddb7dd18d39e4763a505ef472cb966f234638c75b9a4d0182745a13b900bbcff",
+    "data\\interim\\discovered\\detik.tag.jsonl": "25600ede4067838945fb64e4078172e133fa3242b08c1807b376aadcfd3c6386",
+    "data\\interim\\discovered\\kompas.tag.jsonl": "32a3a45d82934fe32acac091742f73b4d0ef542e515f081eea2b304e4bd5c456",
+    "data\\interim\\discovered\\liputan6.tag.jsonl": "32f2b94e2d6f2c18cc8b3c1384dbc775bd45bccfc3e65dca3ce9b21c64deef96",
+    "data\\interim\\discovered\\antara.fetch_ledger.jsonl": "0d57dbe0d88de8893a5192682de9f15f97f70e7b3f03efe8ac8959fa226a46f2",
+    "data\\interim\\discovered\\cnn.fetch_ledger.jsonl": "f750bf331795bc3c07072a4b9d2f7eead4fd965300c2c2d629dc696e8b551d8c",
+    "data\\interim\\discovered\\detik.fetch_ledger.jsonl": "3d215217d39d1cb13f586152e635c5025e22c3ce1a073fbed1bfd9e0b985d7d7",
+    "data\\interim\\discovered\\kompas.fetch_ledger.jsonl": "337c384bb0354f7465afaa363e8de8eec6a19a10cc6de763e332bb7f6b0563c0",
+    "data\\interim\\discovered\\liputan6.fetch_ledger.jsonl": "02a009d0b8aac29434a478ff7c8b070d02992b874ff606c8171f9d2a1412ca3c"
+  },
+  "python": "3.13.15"
+}
